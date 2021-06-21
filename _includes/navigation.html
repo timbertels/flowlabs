@@ -1,0 +1,34 @@
+ <ul id="header-menu">
+   {% for links in site.data.navigation %}
+     {% if links.sublinks %}
+       <li class="has-sub">Page
+           <ul>
+               {% for sublink in links.sublinks %}
+               <li><a href="{{sublink.url absolute='true'}}">{{sublink.title}}</a></li>
+               {% endfor %}
+           </ul>
+       </li>
+       {% else %}
+       <li class="{% if links.url == page.url %} active {% endif %}"><a href="{{links.url absolute='true'}}">{{links.title}}</a></li>
+     {% endif %}
+   {% endfor %}
+      <li>
+	   <a href="#modalsearch" class="search-modal" data-toggle="modal" data-target="#search-modal">
+ 
+         <img src="{{site.baseurl}}/assets/images/search-icon.png" alt="search here">
+      </a>
+	  
+ 
+  
+  
+  
+  
+  
+   </li>
+</ul>
+
+<button class="collapse-btn"> <span class="collapse-bar"></span>
+<span class="collapse-bar"></span>
+<span class="collapse-bar"></span>
+</button>
+

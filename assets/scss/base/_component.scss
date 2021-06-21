@@ -1,0 +1,185 @@
+/**
+* ============================
+*  6.0 Component
+* ============================
+*/
+/*Bg Color*/
+.bg-color1{
+    background-color:$bg-color-default;
+}
+.bg-color2{
+    background-color:$bg-color2;
+}
+.bg-color3{
+    @include background-opacity($bg-color2, 0.95); 
+}
+.vbg-color{
+    background-color: $vbg-color;
+}
+.vbg-color2{
+    background-color: $vbg-color2;
+}
+.vbg-color3{
+    background-color: $vbg-color3;
+}
+.vbg-color4{
+    background-color: $vbg-color4;
+}
+.vbg-color5{
+    background-color: $vbg-color5;
+}
+.vbg-color6{
+    background-color: $vbg-color6;
+}
+.vbg-color7{
+    background-color: $vbg-color7;
+}
+.bg-white{
+    background-color:$bg-color-default !important;
+}
+/*Section/Inner Spacing*/
+%section-spacing{
+    padding-top:$sec-large;
+    padding-bottom:$sec-large;
+    @include desktop{
+        padding-top:$sec-large - 30px;
+        padding-bottom:$sec-large - 30px;
+    }
+    @include tablet{
+        padding-top:$sec-large - 40px;
+        padding-bottom:$sec-large - 40px;
+    }
+}
+%inner-spacing{
+    padding-top:$sec-default;
+    padding-bottom:$sec-default;
+    @include tablet{
+        padding-top:$sec-default - 20px;
+        padding-bottom:$sec-default - 20px;
+    }
+}
+.section-spacing{
+    @extend  %section-spacing;
+}
+.inner-spacing{
+    @extend  %inner-spacing;
+}
+/*Section/Inner Top/Bottom Spacing*/
+%tsection-spacing{
+    padding-top:$sec-large;
+    @include tablet{
+        padding-top:$sec-large - 50px;
+    }
+}
+%tinner-spacing{
+    padding-top:$sec-default;
+}
+%bsection-spacing{
+    padding-bottom:$sec-large;
+    @include tablet{
+        padding-bottom:$sec-large - 50px;
+    }
+}
+%binner-spacing{
+    padding-bottom:$sec-default;
+}
+.tsection-spacing{
+    @extend  %tsection-spacing;
+}
+.tinner-spacing{
+    @extend  %tinner-spacing;
+}
+.bsection-spacing{
+    @extend  %bsection-spacing;
+}
+.binner-spacing{
+    @extend  %binner-spacing;
+}
+/*Spacing Minus*/
+%bminus-30{
+    padding-bottom:$sec-large - 30px;
+    @include desktop{
+        padding-bottom:$sec-large - 50px;
+    }
+    @include tablet{
+        padding-bottom:$sec-large - 70px;
+    }
+}
+%tminus-30{
+    padding-top:$sec-large - 30px;
+    @include desktop{
+        padding-top:$sec-large - 50px;
+    }
+    @include tablet{
+        padding-top:$sec-large - 70px;
+    }
+}
+.bminus-30{
+    @extend  %bminus-30;
+}
+.tminus-30{
+    @extend  %tminus-30;
+}
+
+/*Overlay Color*/
+.bg-transparent{
+    background: transparent;
+}
+%overlay-color{
+    @include background-opacity($bg-color2, .9);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 2;
+}
+.overlay-color{
+    @extend %overlay-color;
+}
+
+/*Button Style*/
+
+  %button1{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 10px 30px;
+    font-weight: $font-weight-default;
+    color: $font-color4;
+    border-radius: $border-radius-round;
+    background-color:$button-bg;
+    border: 0;
+    overflow: hidden;
+    border: 1px solid transparent;
+    &:hover, &:focus, &:active {
+      color: $font-color3;
+      background-color:$button-bg2;
+      border: 1px solid $button-bg;
+     box-shadow: $box-shadow-default;
+    }
+  }
+  %button2{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 10px 30px;
+    font-weight: $font-weight-default;
+    color: $font-color3;
+    border: 0;
+    border-radius: $border-radius-round;
+    background-color:$button-bg2;
+    overflow: hidden;
+    &:hover, &:focus, &:active {
+      background-color:$bg-color4;
+     color:$font-color4;
+       
+    }
+  }
+
+.btn-style1{
+    @extend %button1;
+}
+.btn-style2{
+    @extend %button2;
+}

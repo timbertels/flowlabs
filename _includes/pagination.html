@@ -1,0 +1,25 @@
+<!-- Start pagination Area -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination-area">
+   <div class="pagination-wrapper bg-color3 inner-spacing">
+      <div class="container">
+         <nav class="page-pagination">
+            <ul class="pagination">
+               <li class="page-item"><i class="fas fa-angle-double-left"></i></li>
+                 {% for trail in paginator.page_trail %}
+                   <li {% if page.url == trail.path %}class="page-item selected"{% endif %}>
+                       <a href="{{ trail.path | prepend: site.baseurl }}" class="page-link {% if page.url == trail.path %} active{% endif %}" title="{{trail.title}}">{{ trail.num }}</a>
+                   </li>
+                 {% endfor %}
+               <li class="page-item"><i class="fas fa-angle-double-right"></i></li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+</div>
+{% endif %}
+<!-- End pagination Area -->
+
+
+
+ 

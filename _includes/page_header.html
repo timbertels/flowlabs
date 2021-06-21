@@ -1,0 +1,42 @@
+{% if page.layout == "category" or page.layout == "author" or page.layout == "tag_page"%}
+<div class="d-flex align-items-center header-page-title" style="background-image: url({{site.cover_image}});">
+   <div class="container">
+      <div class="page-title-box">
+         <h1 class="heading-big {% if site.dark_header == false %} text-white {% endif %}">{{page.title}}</h1>
+      </div>
+   </div>
+</div>
+{% endif %}
+{% if page.layout == "post" %}
+<div class="d-flex align-items-center header-page-title" style="background-image: url(
+{% if page.post_image %} {{page.post_image}} {% else %}{{ site.cover_image }}{% endif %}
+);">
+   <div class="container">
+      <div class="page-title-box">
+         <h1 class="heading-big {% if page.dark_header == false %} text-white {% endif %}">{{page.title}} 
+		 </h1>
+         <ul class="page-title-meta list-inline {% if page.dark_header == false %} text-white {% endif %}">
+            <li class="list-inline-item"><i class="far fa-calendar"></i> {{page.date | date_to_long_string}}</li>
+            {% for category in page.categories limit:1 %}
+            <li class="list-inline-item">
+               <a href="/category/{{ category | slugize }}/">
+               <i class="far fa-folder-open"></i> {{ category }}
+               </a>
+            </li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+</div>
+{% endif %}
+{% if page.layout == "page" %}
+<div class="d-flex align-items-center header-page-title" style="background-image: url(
+{% if page.post_image %} {{page.post_image}} {% else %} {{ site.cover_image }} {% endif %}
+);">
+   <div class="container">
+      <div class="page-title-box">
+         <h1 class="heading-big {% if page.dark_header == false %} text-white {% endif %}">{{page.title}}</h1>
+      </div>
+   </div>
+</div>
+{% endif %}

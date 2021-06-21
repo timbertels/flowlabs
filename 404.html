@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /404.html
+dark_header: false
+---
+<div class="d-flex align-items-center header-page-title" style="background-image: url(
+{% if page.post_image %} {{page.post_image}} {% else %} {{ site.cover_image }} {% endif %}
+);">
+   <div class="container">
+      <div class="page-title-box">
+         <h1 class="heading-big {% if page.dark_header == false %} text-white {% endif %}">Not Found</h1>
+      </div>
+   </div>
+</div>
+<div class="container my-5 py-5 text-center ">
+  <h1 class="display-1">404</h1>
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found. Go To <a href="{{site.url}}">Home</a></p>
+</div>

@@ -1,0 +1,123 @@
+/**
+* ============================
+*  4.0 Base Sass
+* ============================
+*/
+body {
+	margin:0;
+    font-family: $Poppins;
+    font-size: $font-size-default;
+	line-height:$line-height-default;
+	font-weight:$font-weight-default;
+    color: $font-color-default;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+    -o-overflow-x: hidden;
+}
+ul,ol{
+    padding:0;
+    padding-left:20px;
+    ul p, ol p{
+        margin:0;
+    }
+
+}
+img{
+    max-width:100%;
+}
+.full-width{
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+.btn,a{
+    box-shadow: none ;
+    outline:none;
+    text-decoration: none;
+    list-style:none;
+
+}
+.form-control{
+    height: auto;
+}
+a{
+    color:$font-color3;
+    @include transition(1s  cubic-bezier(0.075, 0.82, 0.165, 1));
+    text-decoration: none !important;
+    &:hover{
+        color: $font-color3;
+    }
+}
+button:hover,
+button:active,
+button:focus,
+a.btn:active,
+a.btn:focus,
+a.btn:hover {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline:none; 
+}
+.input-group
+.form-control:active,
+.input-group .form-control:focus,
+.input-group .form-control:hover {
+    z-index: 2;
+}
+.input-group-btn:not(:first-child)>.btn-group:active,
+.input-group-btn:not(:first-child)>.btn-group:focus,
+.input-group-btn:not(:first-child)>.btn-group:hover,
+.input-group-btn:not(:first-child)>.btn:active,
+.input-group-btn:not(:first-child)>.btn:focus,
+.input-group-btn:not(:first-child)>.btn:hover {
+    z-index: 1;
+}
+.page-item:first-child .page-link{
+    border-radius: 0;
+}
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+  select.form-control:not([size]):not([multiple]){
+      height:100%;
+  }
+  figure{
+      figcaption{
+          margin-top: 10px;
+      }
+      @include mobile{
+          padding: 5px;
+      }
+  }
+  iframe{
+      border:0;
+      width: 100%;
+  }
+
+.home-top{
+    width:40px;
+    height:40px;
+    background-color: $bg-color2;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 20px;
+    color: $font-color4;
+    text-align: center;
+    padding: 7px 5px;
+    border-radius: $border-radius-round;
+    box-shadow: $box-shadow-default;
+    z-index: 1000;
+    &:hover{
+        color:$font-color4;
+    }
+}

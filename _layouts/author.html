@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% include page_header.html %}
+<div class="blog-area">
+   {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+   {% for posts in filtered_posts %}
+   {% assign item = forloop.index | modulo: 2 %}
+   {% include post_card.html %}
+   {% endfor %}
+</div>

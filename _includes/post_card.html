@@ -1,0 +1,11 @@
+<div class="blog-style d-flex align-items-end" style="background-image: url({{posts.post_image}})"> 
+   <div class="container">
+      <div class="light-text blog-content wow slideInLeft {% if item != 0 %} blog-right {% endif %}" data-wow-duration=".4s">
+         <ul class="blog-date list-inline">
+            <li class="list-inline-item">{{posts.date | date_to_long_string }}</li>
+         </ul>
+         <h2 class="heading-2"><a href="{{posts.url}}">{{posts.title}}</a></h2>
+         <a href="{{posts.url}}" class="blog-read-more">Read More <i class="fas fa-angle-right"></i></a>
+      </div>
+   </div>
+</div>
