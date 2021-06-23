@@ -4,14 +4,14 @@ email: tim@prolead.eu
 description: >- # this means to ignore newlines until "baseurl:"
   Flow Labs Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: "http://flowla.bs" # the base hostname & protocol for your site, e.g. https://example.com
 
 
 # Site Settings
 twitter_username: jekyllrb
 dark_header:  false
-logo_url: /flowlabs/assets/images/header-logo.png
-cover_image: /flowlabs/assets/images/blog-img-13.jpg
+logo_url: /assets/images/header-logo.png
+cover_image: /assets/images/blog-img-13.jpg
 mailclimp_url: 'https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&amp;id=4784863884'
 dribble_url: https://dribble.com/themeix
 facebook_url: https://facebook.com/themeix
