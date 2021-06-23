@@ -2,9 +2,9 @@
 title: Flow Labs
 email: tim@prolead.eu
 description: >- # this means to ignore newlines until "baseurl:"
-  Arnica Responsive Static Jekyll Theme For Blogging.
-baseurl: "/flowlabs" # the subpath of your site, e.g. /blog
-url: "https://timbertels.github.io" # the base hostname & protocol for your site, e.g. https://example.com
+  Flow Labs Blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
 
 
 # Site Settings
